@@ -1,0 +1,130 @@
+$white: #fff;
+$black: #000;
+$orange: #e5540d;
+$darkgrey: #4a494a;
+$lightgrey: #d7d7d7;
+$mediumgrey: #9b9a9b;
+
+.rounded-corners {
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+header {
+	height: 130px;
+	background: $black;
+	color: $white;
+	padding: 15px;
+}
+.logo {
+	float: left;
+	width: 257px;
+	height: 71px;
+	padding: 15px;
+}
+.account {
+	width: 250px;
+	text-align: right;
+	position: absolute;
+	right: 10px;
+
+		a {
+			color: $white;
+			padding: 0 20px 0 0;
+				&:hover {
+					text-decoration: underline;
+				}
+		}
+}
+nav {
+	float: right;
+	width: 500px;
+	font-size: 20px;
+	text-align: right;
+	margin: 72px 0 0 0;
+
+		a {
+			color: $white;
+			transition: all .2s ease-in;
+				&:hover {
+					color: $orange;
+					transition: all .2s ease-in;
+				}
+		}
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			list-style-type: none;
+			padding: 0 15px;
+			margin: 0;
+			display: inline-block;
+		}
+}
+#mobile-menu {
+	display: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .account {
+    	display: none;
+    }
+    nav {
+    	display: none;
+    }
+    #mobile-menu {
+    	display: block;
+    	float: left;
+    	margin: 30px 0 0 0;
+    }
+    .logo {
+    	display: block;
+    	margin: 0 auto;
+    	text-align: center;
+    	width: 100%;
+    	float: none;
+
+    		img {
+    			max-width: 70%;
+    			height: auto;
+    		}
+    }
+    .side-nav {
+    	background: #4a494a;
+    	padding: 10px 0 10px !important;
+
+    		ul {
+    			border-top: none;
+    			border-bottom: none;
+    		}
+    		li {
+    			border-top: none;
+		    	border-bottom: none;
+		    	font-size: 20px;
+    		}
+    }
+    .sidr ul {
+    	border-top: none;
+    	border-bottom: none;
+    }
+    .sidr ul li {
+    	border-top: none;
+    	border-bottom: none;
+    }
+    li.side-account {
+    	font-size: 16px;
+    	background: url('../images/profile.png') no-repeat center left;
+    	margin: 0 0 0 10px !important;
+    	padding: 0 0 0 10px;
+    }
+    li.side-support {
+    	font-size: 16px;
+    	background: url('../images/support.png') no-repeat center left;
+    	margin: 0 0 0 10px !important;
+    	padding: 0 0 0 10px;
+    }
+}
+

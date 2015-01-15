@@ -1,0 +1,21 @@
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+img {
+	border: 0;
+}
+
+body {
+	font-family: Verdana, sans-serif;
+	background: $darkgrey;
+	color: $black;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased !important;
+}
