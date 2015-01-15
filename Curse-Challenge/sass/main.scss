@@ -1,0 +1,57 @@
+// VARIABLES
+$white: #fff;
+$black: #000;
+$buttonBlue: #5b7894;
+
+// MIXINS
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+@mixin button-gradient {
+  background-color: rgba(103,144,184,1);
+  background-color: -moz-linear-gradient(top, rgba(103,144,184,1) 0%, rgba(61,89,117,1) 71%, rgba(61,89,117,1) 100%);
+  background-color: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(103,144,184,1)), color-stop(71%, rgba(61,89,117,1)), color-stop(100%, rgba(61,89,117,1)));
+  background-color: -webkit-linear-gradient(top, rgba(103,144,184,1) 0%, rgba(61,89,117,1) 71%, rgba(61,89,117,1) 100%);
+  background-color: -o-linear-gradient(top, rgba(103,144,184,1) 0%, rgba(61,89,117,1) 71%, rgba(61,89,117,1) 100%);
+  background-color: -ms-linear-gradient(top, rgba(103,144,184,1) 0%, rgba(61,89,117,1) 71%, rgba(61,89,117,1) 100%);
+  background-color: linear-gradient(to bottom, rgba(103,144,184,1) 0%, rgba(61,89,117,1) 71%, rgba(61,89,117,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6790b8', endColorstr='#3d5975', GradientType=0 );
+}
+@mixin button-gradient-hover {
+  background-color: #7c9cba; /* Old browsers */
+  background-color: -moz-linear-gradient(top,  #7c9cba 0%, #4d6d8e 100%); /* FF3.6+ */
+  background-color: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7c9cba), color-stop(100%,#4d6d8e)); /* Chrome,Safari4+ */
+  background-color: -webkit-linear-gradient(top,  #7c9cba 0%,#4d6d8e 100%); /* Chrome10+,Safari5.1+ */
+  background-color: -o-linear-gradient(top,  #7c9cba 0%,#4d6d8e 100%); /* Opera 11.10+ */
+  background-color: -ms-linear-gradient(top,  #7c9cba 0%,#4d6d8e 100%); /* IE10+ */
+  background-color: linear-gradient(to bottom,  #7c9cba 0%,#4d6d8e 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c9cba', endColorstr='#4d6d8e',GradientType=0 ); /* IE6-9 */
+}
+@mixin background-cover {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+@mixin box-shadow {
+  -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow:    3px 3px 2px 0px rgba(0, 0, 0, 0.35);
+  box-shadow:         3px 3px 2px 0px rgba(0, 0, 0, 0.35);
+}
+@mixin transition-all {
+  -moz-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+// PAGE ELEMENT PARTIALS
+@import "partials/elements/header";
+@import "partials/elements/nav";
+@import "partials/elements/footer";
+@import "partials/base";
+
+// PAGES PARTIALS
+@import "partials/pages/home";

@@ -1,0 +1,384 @@
+.container-main {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 55px 0 0 0;
+}
+
+// BUTTONS
+.button-main {
+  @include button-gradient;
+  @include border-radius(7px);
+  border-bottom: 1px solid #5b7894;
+  display: block;
+  color: $white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.6);
+  	&:hover {
+  	  @include button-gradient-hover;
+  	}
+}
+.button-twitter {
+  width: 27px;
+  height: 27px;
+  text-indent: -99999px;
+  background-image: url('../images/social-icons-sprite.png');
+  background-position: 0px -1px;
+  background-repeat: no-repeat;
+  margin: 0 6px 0 0;
+}
+.button-facebook {
+  width: 27px;
+  height: 27px;
+  text-indent: -99999px;
+  background-image: url('../images/social-icons-sprite.png');
+  background-position: -26px -1px;
+  background-repeat: no-repeat;
+  margin: 0 6px 0 0;
+}
+.button-youtube {
+  width: 27px;
+  height: 27px;
+  text-indent: -99999px;
+  background-image: url('../images/social-icons-sprite.png');
+  background-position: -54px 0px;
+  background-repeat: no-repeat;
+  margin: 0 8px 0 0;
+}
+
+// NEWS
+.news {
+  border-left: 1px solid #212222;
+  border-right: 1px solid #212222;
+  border-bottom: 1px solid #212222;
+  border-top: 1px solid #2b2c2c;
+  overflow: hidden;
+  color: #cfcfcf;
+  background: url('../images/news-bg.png') repeat-x center top;
+  margin: 8px 0 0 0;
+  @include background-cover;
+}
+.news-title-contain {
+  background: #212222;
+  width: 100%;
+  padding: 14px;
+  overflow: hidden;
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      float: left;
+      padding: 0;
+      margin: 0;
+
+    }
+}
+.news-info {
+  float: right;
+  color: #bababa;
+  font-size: 12px;
+  display: block;
+  padding: 4px 0 0 0;
+    a {
+      color: $buttonBlue;
+      font-weight: bold;
+    }
+}
+.news-main {
+  padding: 15px;
+  font-size: 14px;
+  color: #cfcfcf;
+  overflow: hidden;
+    p {
+      padding: 0 0 25px 0;
+    }
+    .button-main {
+      float: right;
+      padding: 5px 10px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+}
+
+// TALENT TREE
+.talent-calc {
+  border: 1px solid #1a1e22;
+  background: url('../images/talent-calc-bg.png') no-repeat center top;
+  padding: 19px;
+  margin: 8px 0 0 0;
+  overflow: hidden;
+  min-height: 370px;
+  @include background-cover;
+}
+.talent-header {
+  background: url('../images/talent-header-bg.png');
+  height: 43px;
+  font-size: 25px;
+  color: $white;
+  font-weight: 600;
+  text-align: center;
+  padding: 3px 0 0 0;
+}
+.talent-left {
+  float: left;
+  width: 685px;
+  margin: 58px 0 0 0;
+    ul {
+      list-style-type: none;
+    }
+    li {
+      display: inline-block;
+      height: 72px;
+      float: left;
+      box-sizing: border-box;
+    }
+    button {
+      height: 60px;
+      width: 60px;
+      margin: -5px;
+      background: none;
+      text-indent: -9999px;
+      padding: 0;
+      border: none;
+      cursor: pointer;
+    }
+}
+.talent-right {
+  width: 176px;
+  height: 90px;
+  float: right;
+  background: url('../images/talent-counter-bg.png');
+  border: 1px solid #141718;
+  margin: 100px 45px 0 0;
+  text-align: center;
+  padding: 11px 0 0 0;
+    h3 {
+      font-size: 23px;
+      margin: 0;
+      padding: 0;
+      font-weight: 600;
+      display: block;
+    }
+    span {
+      color: $buttonBlue;
+      font-size: 23px;
+    }
+    #count {
+      color: $white;
+    }
+}
+.talent-title {
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 25px 25px 0 0;
+}
+.talent-bg {
+  width: 72px;
+  background: url('../images/talent-icon-surround.png') no-repeat center;
+}
+.talent-bg-active {
+  width: 72px;
+  background: url('../images/talent-icon-surround-active.png') no-repeat center;
+}
+#path-1, #path-2 {
+  overflow: hidden;
+}
+#path-2 {
+  margin: 30px 0 0 0;
+}
+.talent-1 {
+  background: url('../images/talent-icons-sprite.png') no-repeat 0px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat 0px 0px;
+    }
+}
+.talent-1-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat 0px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
+#talent-1 {
+  margin: 0 82px 0 0;
+    &::after {
+      opacity: .6;
+      content: "";
+      display: block;
+      background: url('../images/talent-connecting-bar.png') no-repeat 0px 0px;
+      width: 96px;
+      height: 14px;
+      margin: -31px -90px 0 0;
+      float:right;
+    }
+}
+.talent-2 {
+  background: url('../images/talent-icons-sprite.png') no-repeat -50px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat -50px 0px;
+    }
+}
+.talent-2-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat -50px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
+#talent-2 {
+  margin: 0 82px 0 0;
+    &::after {
+      opacity: .6;
+      content: "";
+      display: block;
+      background: url('../images/talent-connecting-bar.png') no-repeat 0px 0px;
+      width: 96px;
+      height: 14px;
+      margin: -31px -90px 0 0;
+      float:right;
+    }
+}
+.talent-3 {
+  background: url('../images/talent-icons-sprite.png') no-repeat -100px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat -100px 0px;
+    }
+}
+.talent-3-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat -100px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
+#talent-3 {
+  margin: 0 82px 0 0;
+    &::after {
+      opacity: .6;
+      content: "";
+      display: block;
+      background: url('../images/talent-connecting-bar.png') no-repeat 0px 0px;
+      width: 96px;
+      height: 14px;
+      margin: -31px -90px 0 0;
+      float:right;
+    }
+}
+.talent-4 {
+  background: url('../images/talent-icons-sprite.png') no-repeat -150px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat -150px 0px;
+    }
+}
+.talent-4-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat -150px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
+.talent-5 {
+  background: url('../images/talent-icons-sprite.png') no-repeat -200px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat -200px 0px;
+    }
+}
+.talent-5-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat -200px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
+#talent-5 {
+  margin: 0 82px 0 0;
+    &::after {
+      opacity: .6;
+      content: "";
+      display: block;
+      background: url('../images/talent-connecting-bar.png') no-repeat 0px 0px;
+      width: 96px;
+      height: 14px;
+      margin: -31px -90px 0 0;
+      float:right;
+    }
+}
+.talent-6 {
+  background: url('../images/talent-icons-sprite.png') no-repeat -250px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat -250px 0px;
+    }
+}
+.talent-6-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat -250px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
+#talent-6 {
+  margin: 0 82px 0 0;
+    &::after {
+      opacity: .6;
+      content: "";
+      display: block;
+      background: url('../images/talent-connecting-bar.png') no-repeat 0px 0px;
+      width: 96px;
+      height: 14px;
+      margin: -31px -90px 0 0;
+      float:right;
+    }
+}
+.talent-7 {
+  background: url('../images/talent-icons-sprite.png') no-repeat -300px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat -300px 0px;
+    }
+}
+.talent-7-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat -300px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
+#talent-7 {
+  margin: 0 82px 0 0;
+    &::after {
+      opacity: .6;
+      content: "";
+      display: block;
+      background: url('../images/talent-connecting-bar.png') no-repeat 0px 0px;
+      width: 96px;
+      height: 14px;
+      margin: -31px -90px 0 0;
+      float:right;
+    }
+}
+.talent-8 {
+  background: url('../images/talent-icons-sprite.png') no-repeat -350px -50px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+    &:hover {
+      background: url('../images/talent-icons-sprite.png') no-repeat -350px 0px;
+    }
+}
+.talent-8-active {
+  background: url('../images/talent-icons-sprite.png') no-repeat -350px 0px;
+  height: 50px;
+  width: 50px;
+  margin: 11px 0 0 11px;
+}
