@@ -1,0 +1,33 @@
+$link-primary: #c8ced5;
+$link-secondary: #00cc99;
+$text-body: #262728;
+$text-body-lt: #70767f;
+$icons: #bec3cc;
+$header-bg: #262728;
+$header-search: #5c5f62;
+$border-grey-lt: #dee1e5;
+$border-grey-lt2: #eaeced;
+$body-teal: #00cc99;
+$post-name: #3f454d;
+$post-main: #70767f;
+$post-link: #bec3cc;
+$post-expanded-bg: #f9fafb;
+$modal-bg: #dee1e6;
+
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) { @content; }
+  }
+ 
+  @else if $class == sm {
+    @media (min-width: 768px) { @content; }
+  }
+ 
+  @else if $class == md {
+    @media (min-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+}

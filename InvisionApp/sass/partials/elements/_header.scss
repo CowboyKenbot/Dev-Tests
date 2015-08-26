@@ -1,0 +1,131 @@
+header {
+    background-color: $header-bg;
+}
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+}
+.header-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 0;
+    overflow: hidden;
+    .header-logo {
+        width: 150px;
+        float: left;
+        @include breakpoint(xs) {
+          width: 50%;
+        }
+    }
+    .header-user {
+        width: 350px;
+        float: right;
+        overflow: hidden;
+        @include breakpoint(xs) {
+          width: 100px;
+        }
+    }
+    .header-messages {
+        width: 31px;
+        margin-right: 20px;
+        margin-top: 3px;
+        float: left;
+    }
+    .header-search {
+        width: 200px;
+        margin-right: 20px;
+        float: left;
+        @include breakpoint(xs) {
+          display: none;
+        }
+    }
+    .header-avatar {
+        width: 47px;
+        float: left;
+        @include breakpoint(xs) {
+          float: right;
+        }
+        a.avatar-arrow {
+            display: block;
+            background-image: url('../images/header-avatar-drop.png');
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+        &:hover {
+            .header-avatar-dropdown {
+                opacity: 1;
+                transition: opacity .25s ease-in-out;
+                right: auto;
+            }
+        }
+    }
+    .header-avatar-dropdown {
+        position: absolute;
+        opacity: 0;
+        transition: opacity .25s ease-in-out;
+        right: 2000px;
+        &:before {
+          content: '';
+          width: 0; 
+          height: 0; 
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-bottom: 5px solid white;
+          position: absolute;
+          right: 18px;
+          top: 2px;
+        }
+        a {
+            color: $text-body-lt;
+            display: block;
+            padding: 0 10px;
+        }
+        ul {
+            list-style-type: none;
+            border-radius: 4px;
+            background-color: white;
+            color: $text-body-lt;
+            font-size: 12px;
+            clear: both;
+            width: 100px;
+            margin-left: -33px;
+            margin-top: 7px;
+        }
+        li {
+            border-bottom: 1px solid #ccc;
+            padding: 7px 0;
+        }
+        li:last-of-type {
+            border-bottom: none;
+        }
+    }
+}
+.icon-messages {
+    background-image: url('../images/header-message.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 26px;
+    width: 31px;
+    display: block;
+    a {
+        display: block;
+        text-indent: -99999px;
+    }
+    &:hover {
+        background-position: center bottom;
+    }
+}
+.searchBox {
+    width: 100%;
+    color: $header-search;
+    background-color: $header-bg;
+    border: 1px solid $header-search;
+    border-radius: 5px;
+    padding: 8px;
+    background-image: url('../images/header-search.png');
+    background-repeat: no-repeat;
+    background-position: 95% 49%;
+}

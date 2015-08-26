@@ -1,0 +1,134 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+img {
+  border: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: white;
+  color: $text-body;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.modal-box {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+  width: 45%;
+  background: $modal-bg;
+  border-bottom: 1px solid #aaa;
+  border-radius: 5px;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-clip: padding-box;
+  @include breakpoint(xs) {
+    width: 85%;
+  }
+}
+
+.modal-box .modal-body {
+  padding: 20px;
+  font-size: 15px;
+  color: #71767c;
+  overflow: hidden;
+  p {
+    margin: 0 0 15px 0;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid $border-grey-lt;
+  }
+  a {
+    color: #71767c;
+  }
+  .modal-photo {
+    background-image: url('../images/icon-photo-grey.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    padding-right: 30px;
+    @include breakpoint(xs) {
+      padding-right: 15px;
+    }
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .modal-video {
+    background-image: url('../images/icon-video-grey.png');
+    background-position: left;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .post-cta {
+    margin-top: 25px;
+  }
+  .btn-post {
+    border-radius: 5px;
+    background-color: $link-secondary;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    float: right;
+    padding: 8px 25px;
+    margin-top: -9px;
+    @include breakpoint(xs) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.modal-overlay {
+  opacity: 0;
+  filter: alpha(opacity=0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 1) !important;
+}
+
+.btn-modal-close {
+  background-image: url('../images/modal-close.png');
+  background-repeat: no-repeat;
+  width: 21px;
+  height: 21px;
+  display: block;
+  float: right;
+  margin-top: -20px;
+  margin-right: -20px;
+}
+
+a.close {
+  line-height: 1;
+  font-size: 1.5em;
+  position: absolute;
+  top: 5%;
+  right: 2%;
+  text-decoration: none;
+  color: #bbb;
+}
+
+a.close:hover {
+  color: #222;
+  -webkit-transition: color 1s ease;
+  -moz-transition: color 1s ease;
+  transition: color 1s ease;
+}
